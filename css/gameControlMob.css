@@ -1,0 +1,119 @@
+.gameControl {
+    opacity: 0.3;
+    display: block;
+    user-select: none;
+    font-family: system-ui;
+}
+
+.gameControl.posBottomRight .directionBtns{
+    position: fixed;
+    bottom: 5vw;
+    right: 5vw;
+}
+.gameControl.posBottomLeft .directionBtns{
+    position: fixed;
+    bottom: 5vw;
+    left: 5vw;
+}
+
+.gameControl.posTopRight .directionBtns{
+    position: fixed;
+    top: 5vw;
+    right: 5vw;
+}
+
+.gameControl.posTopLeft .directionBtns{
+    position: fixed;
+    top: 5vw;
+    left: 5vw;
+}
+
+.gameControl td {
+    padding: 0.7vw;
+}
+
+.gameControl span.arrow {
+    border-radius: 2vw;
+    width: 7vw;
+    height: 7vw;
+    display: block;
+    background-image: url("data:image/svg+xml, %3Csvg%20width%3D%22110%22%20height%3D%22110%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%3E%3Ctitle%3ELayer%201%3C%2Ftitle%3E%3Cpath%20stroke-width%3D%220%22%20id%3D%22svg_1%22%20d%3D%22m0%2C-0.05653l110%2C0l0%2C110l-110%2C0c0%2C-36.66667%200%2C-73.33333%200%2C-110z%22%20opacity%3D%22undefined%22%20stroke%3D%22%23000%22%20fill%3D%22darkviolet%22%2F%3E%3Cg%20id%3D%22svg_9%22%3E%3Cpath%20stroke%3D%22%23ffffff%22%20id%3D%22svg_4%22%20d%3D%22m30.69645%2C46.51261l24.55355%2C-31.15622l24.55355%2C31.15622c-16.36903%2C0%20-32.73807%2C0%20-49.1071%2C0z%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20id%3D%22svg_7%22%20height%3D%2262.49994%22%20width%3D%2214.99999%22%20y%3D%2231.58326%22%20x%3D%2247.50001%22%20stroke%3D%22%23ffffff%22%20fill%3D%22%23ffffff%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");/**url('./img/arrow.svg');**/
+    background-size:contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.gameControl .commonBtns .btnRow{
+    position: fixed;
+    padding: 0.7vw;
+}
+
+.gameControl.posBottomRight .commonBtns .btnRow.row1{
+    bottom: 14.1vw;
+    left: 5vw;
+}
+
+.gameControl.posBottomRight .commonBtns .btnRow.row2{
+    bottom: 5vw;
+    left: 9vw;
+}
+
+.gameControl.posBottomLeft .commonBtns .btnRow.row1{
+    bottom: 14.1vw;
+    right: 5vw;
+}
+
+.gameControl.posBottomLeft .commonBtns .btnRow.row2{
+    bottom: 5vw;
+    right: 9vw;
+}
+
+.gameControl.posTopRight .commonBtns .btnRow.row1{
+    top: 5vw;
+    left: 5vw;
+}
+
+.gameControl.posTopRight .commonBtns .btnRow.row2{
+    top: 14.1vw;
+    left: 9vw;
+}
+
+.gameControl.posTopLeft .commonBtns .btnRow.row1{
+    right: 5vw;
+    top: 5vw;
+}
+
+.gameControl.posTopLeft .commonBtns .btnRow.row2{
+    right: 9vw;
+    top: 14.1vw;
+}
+
+.gameControl .commonBtns .controlBtn{
+    border-radius: 2vw;
+    width: 7vw;
+    height: 7vw;
+    display: inline-block;
+    background-color: darkviolet;
+    text-align: center;
+    line-height: 7vw;
+    font-size: 4vw;
+    font-weight: bolder;
+    color: white;
+    margin-right: 2vw;
+    cursor: pointer;
+}
+.gameControl span.arrow:active, .commonBtns .controlBtn:active {
+    opacity: 0.5;
+}
+
+.gameControl span.leftArrow{
+    transform: rotate(-90deg);
+}
+
+.gameControl span.downArrow{
+    transform: rotate(180deg);
+}
+
+.gameControl span.rightArrow{
+    transform: rotate(90deg);
+}

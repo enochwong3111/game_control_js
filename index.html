@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/gameControlMob.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src = "./src/gameControl.js"></script>
+    </head>
+    <body>
+        <div style="width:500px;height:500px" data-for="testArea"></div>
+        <script>
+            $(function(){
+                var setting = {
+                    type: GameControl.DirectionBtnType.Grid,
+                    position: GameControl.Position.BottomRight,
+                    buttons: {
+                        common: {
+                            num: 4
+                        }
+                    },
+                    // mobileOnly: true
+                };
+                GameControl.init(setting);
+                ['Up', 'Down', 'Left', 'Right', 'Btn_0', 'Btn_1', 'Btn_2', 'Btn_3'].forEach(function(item) {
+                    GameControl.bindKeyPressEvent(GameControl.Keys[item], function(e){
+                        e.stopPropagation();
+                        e.preventDefault();
+                        $('[data-for="testArea"]').text(item + ' button clicked');
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
