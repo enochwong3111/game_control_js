@@ -102,9 +102,10 @@
     margin-right: 2vw;
     cursor: pointer;
 }
-.gameControl span.arrow:active, .commonBtns .controlBtn:active {
+
+/* .gameControl span.arrow:active, .commonBtns .controlBtn:active {
     opacity: 0.5;
-}
+} */
 
 .gameControl span.leftArrow{
     transform: rotate(-90deg);
