@@ -104,14 +104,18 @@ $(function(){
      *
      * @param   {string}     key  The key to be bound with the event.
      * @param   {Function}   callback  The callback function after the key pressed
+     * @param   {Function}   touchendCallback  The callback function when touchend fired for mobile
      * @returns null
      */
-    function bindKeyPressEvent(key, callback) {
+    function bindKeyPressEvent(key, callback, touchendCallback) {
         var eventToBind = 'click';
         if (usingMobile) {
             eventToBind = 'touchstart';
         }
         $('.gameControl [btn-for="' + key + '"]').on(eventToBind, callback);
+        if (usingMobile && touchendCallback) {
+            $('.gameControl [btn-for="' + key + '"]').on('touchend', touchendCallback);
+        }
     }
     GameControl.bindKeyPressEvent = bindKeyPressEvent;
 
